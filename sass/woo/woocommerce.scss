@@ -1,0 +1,81 @@
+// Fix billing field wrapper
+.woocommerce-input-wrapper {
+	width: 100%;
+}
+
+// Woocommerce product gallery slider width fix
+figure.woocommerce-product-gallery__wrapper {
+	max-width: inherit !important;
+}
+
+// Fix coupon code input width
+@media(min-width: 768px) {
+	#coupon_code.input-text {
+		width: 110px !important;
+	}
+}
+.woocommerce {
+
+	button, a.button {
+		background:none;
+		border: 2px solid $white;
+		border-radius:3px;
+		text-align:center;
+		padding: 0.95em 2em;
+		font-size: rem(14);
+		text-transform:uppercase;
+		color:$white;
+		font-weight:700;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			background:$primary;
+		border: 2px solid $primary;
+		}
+
+		
+	}
+	
+	button.alt-button, a.alt-button {
+		background:none;
+		font-size: rem(14);
+		border: 2px solid $secondary;
+		color:$secondary;
+		&:hover {
+			background:$secondary;
+			border: 2px solid $secondary;
+			color:$white;
+		}
+	}
+	button.secondary-button, a.secondary-button {
+		background:$secondary;
+		border: 2px solid $secondary;
+		width:100%;
+		&:hover {
+			background:none;
+			border: 2px solid $secondary;
+			color:$secondary;
+		}
+	}
+
+	.product {
+		.quantity {
+
+			float: left;
+			margin: 0 2em 0 0;
+			width: 10em;
+			height: 3.5em;
+			position: relative;
+				input.qty {
+					width: 100%;
+					text-align: left;
+					-webkit-appearance: none;
+					height: 100%;
+					padding-right: 0;
+					border: 2px solid transparent;
+					border-color: #edeef2;
+					padding-left: 1.5em;
+					border-radius: 4px;
+				}
+		}
+	}
+}

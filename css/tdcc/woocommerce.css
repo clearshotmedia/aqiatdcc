@@ -1,0 +1,11 @@
+.woocommerce-input-wrapper {
+  width: 100%; }
+
+figure.woocommerce-product-gallery__wrapper {
+  max-width: inherit !important; }
+
+@media (min-width: 768px) {
+  #coupon_code.input-text {
+    width: 110px !important; } }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRkY2Mvd29vY29tbWVyY2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNDLFdBQVcsRUFBQTs7QUFJWjtFQUNDLDZCQUE2QixFQUFBOztBQUk5QjtFQUNDO0lBQ0MsdUJBQXVCLEVBQUEsRUFDdkIiLCJmaWxlIjoidGRjYy93b29jb21tZXJjZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBGaXggYmlsbGluZyBmaWVsZCB3cmFwcGVyXG4ud29vY29tbWVyY2UtaW5wdXQtd3JhcHBlciB7XG5cdHdpZHRoOiAxMDAlO1xufVxuXG4vLyBXb29jb21tZXJjZSBwcm9kdWN0IGdhbGxlcnkgc2xpZGVyIHdpZHRoIGZpeFxuZmlndXJlLndvb2NvbW1lcmNlLXByb2R1Y3QtZ2FsbGVyeV9fd3JhcHBlciB7XG5cdG1heC13aWR0aDogaW5oZXJpdCAhaW1wb3J0YW50O1xufVxuXG4vLyBGaXggY291cG9uIGNvZGUgaW5wdXQgd2lkdGhcbkBtZWRpYShtaW4td2lkdGg6IDc2OHB4KSB7XG5cdCNjb3Vwb25fY29kZS5pbnB1dC10ZXh0IHtcblx0XHR3aWR0aDogMTEwcHggIWltcG9ydGFudDtcblx0fVxufVxuIl19 */

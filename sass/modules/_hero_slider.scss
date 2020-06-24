@@ -1,0 +1,22 @@
+#hero_slider {
+    padding: 0 0 !important;
+
+    hr {
+        height: 3px;
+        background-color: $grey;
+        width: 0%;
+        margin: 0px 0px 0px 0px;
+        border: none;
+        z-index: 11;
+        position: relative;
+    }
+    .carousel-caption {
+        position: absolute;
+        right: 40%;
+        top: 20%;
+        left: 10%;
+       
+    }
+    
+    
+}

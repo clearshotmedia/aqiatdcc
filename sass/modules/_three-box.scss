@@ -1,0 +1,36 @@
+#three-box {
+    background:$black;
+    background-position: center;
+   
+    
+    .three-box-heading {
+        color:white;
+        text-align:center;
+  
+    }
+
+    .team-box{
+        background-color: rgba(7,27,71,0.7);
+        display: inline-block;
+        overflow: hidden;
+        border: 2px solid transparent;
+        margin-left:4px;
+        margin-right:4px;
+        padding: 0 1rem;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        color: #ffffff;
+     border-color: #ffffff;
+     p {
+         color:$white;
+     }
+     h4 {
+         padding:3rem 1rem;
+     }
+
+     button {
+         margin:4em 0;
+     }
+    }
+}

@@ -1,0 +1,25 @@
+#socials {
+    padding-top:2em;
+    background: $light;
+
+    color:$primary;
+    h2 {
+        padding-bottom: 0 !important;
+    }
+    h6.subheading {
+        color: $grey;
+        font-weight:600;
+    }
+
+    i {
+        font-size:rem(50) !important;
+        color:$grey;
+        padding: 1rem 1rem;
+        &:hover {
+            color:$secondary;
+            -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+        }
+    }
+}
