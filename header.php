@@ -6,29 +6,22 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-
-
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	
 
-	<?php wp_head(); 
-	
-	?>
-	
+	<?php wp_head(); ?>
 	
 </head>
 
 <body <?php body_class(); ?>>
-
 <div id="page" class="site">
+<div class="main-header">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'aqia' ); ?></a>
 
 	<header id="masthead" class="site-header container">
 		<div class="nav-bar-container row ">
 	
-
 		<div class="col-lg-4 col-9">
 			<?php
 			the_custom_logo();
@@ -36,10 +29,14 @@
 			?>
 		</div><!-- .site-branding -->
 
-<div class=" d-none d-lg-block">
-    <div class="header-widget">
-    <span class="tagline">tagline</span><a href="https://www.facebook.com/ActiveQueenslandersIndustryAlliance"><i class="icofont-facebook"></i></a> <a href="https://www.linkedin.com/company/active-queenslanders-industry-alliance"><i class="icofont-linkedin"></i></a>  <a href="mailto:admin@aqia.org.au"><i class="icofont-envelope"></i></a>
+		<div class=" col-3 d-none d-lg-block ">
+		<div class="header-widget">
+    <span class="tagline">tagline</span><a href="#"><i class="icofont-facebook"></i></a> <a href="#"><i class="icofont-twitter"></i></a>  <a href="#"><i class="icofont-envelope"></i></a>
 </div>
+		</div>
+</div> <div class="row">
+<div class=" d-none d-lg-block">
+   
    
 		<nav id="site-navigation" class="main-navigation ">
         <?php
@@ -81,8 +78,8 @@
 			) );
 			?>
 				<div class="col-12 header-widget">
-				<span class="tagline">Supporting the Fitness, Sport and Recreation Industry in Queensland</span>
-				<a href="https://www.facebook.com/ActiveQueenslandersIndustryAlliance"><i class="icofont-facebook"></i></a> <a href="https://www.linkedin.com/company/active-queenslanders-industry-alliance"><i class="icofont-linkedin"></i></a>  <a href="mailto:admin@aqia.org.au"><i class="icofont-envelope"></i></a></div>
+				<span class="tagline">tagline</span>
+				<a href="#"><i class="icofont-facebook"></i></a> <a href="#"><i class="icofont-twitter"></i></a>  <a href="#"><i class="icofont-envelope"></i></a></div>
         </div></div>
 
         </div>
@@ -94,6 +91,6 @@
 		
 	</nav>
 
-
+	</div>
 	<div id="content" class="site-content">
 	

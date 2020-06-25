@@ -7,9 +7,12 @@ if ($height == 'large') {
 } else if ($height == 'medium') {
     $vh = '45vh';
 } else {
-    $vh = '15vh';
+    $vh = '25vh';
 }
 ?>
 
 <section id="full_width_image" style="background:url('<?php echo $background; ?>'); background-size:cover; height:<?php echo $vh; ?>">
-</section>
+</section><div class="lead">
+
+
+</div>

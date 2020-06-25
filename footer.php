@@ -36,7 +36,7 @@
 		
 		<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( '© 2019 AQIA' ) );
+				printf( esc_html__( '© 2020 TDCC' ) );
 				?>
 				
 		</div>
@@ -49,7 +49,7 @@
 			</a>
 		</div>
 		<div class="col-4 social alignright">
-		<a href="https://www.facebook.com/ActiveQueenslandersIndustryAlliance"><i class="icofont-facebook"></i></a> <a href="https://www.linkedin.com/company/active-queenslanders-industry-alliance"><i class="icofont-linkedin"></i></a>
+		<a href="#"><i class="icofont-facebook"></i></a> <a href="#"><i class="icofont-twitter"></i></a>
 		
 		</div>
 

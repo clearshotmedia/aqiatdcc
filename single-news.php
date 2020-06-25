@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Level 1 Template
+ * Template Name: News
  * @package aqia
  */
 

@@ -73,12 +73,7 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Theme Partner Settings',
-		'menu_title'	=> 'Members and Partners',
-		'parent_slug'	=> 'theme-general-options',
-		
-	));
+	
 	
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Theme Footer Settings',
@@ -102,85 +97,11 @@ function my_acf_settings_show_admin( $show_admin ) {
 endif;
 
 
-function aqia_content_width() {
-	
-	$GLOBALS['content_width'] = apply_filters( 'aqia_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'aqia_content_width', 0 );
 
-function my_enqueue() {
-	wp_register_script( 'isotope', get_template_directory_uri().'/js/lib/isotope.pkgd.min.js', array('jquery'),  true );
-	wp_register_script( 'isotope-init', get_template_directory_uri().'/js/ajax-filter.js', array('jquery', 'isotope'),  true );
-	wp_enqueue_script('isotope-init');
-    wp_localize_script( 'isotope-init', 'my_ajax_object',
-            array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
-}
-add_action( 'wp_enqueue_scripts', 'my_enqueue' );
 
-add_action( 'wpcf7_init', 'wpcf7_add_form_tag_current_url' );
-function wpcf7_add_form_tag_current_url() {
-    // Add shortcode for the form [current_url]
-    wpcf7_add_form_tag( 'current_url',
-        'wpcf7_current_url_form_tag_handler',
-        array(
-            'name-attr' => true
-        )
-    );
-}
 
-// Parse the shortcode in the frontend
-function wpcf7_current_url_form_tag_handler( $tag ) {
-    global $wp;
-    $url = home_url( $wp->request );
-    return '<input type="hidden" name="'.$tag['name'].'" value="'.$url.'" />';
-}
-function ajax_filterposts_handler() {
 
-	$category = esc_attr( $_POST['category'] );
-	
-	$terms = get_terms( array(
-		'taxonomy' => 'offer_type',
-    'hide_empty' => false,
-	) );
-	$args = array(
-		'post_type' => 'offer',
-		'post_status' => 'publish',
-		'posts_per_page' => -1,
-		'orderby' => 'date',
-		'order' => 'DESC',
-		'tax_query'      => array(
-			array(
-				'taxonomy' => 'offer_type',
-				'field'    => 'id',
-				'terms'    => array($category)
-			),
-		),
-	);
-	
-	$posts = 'No posts found.';
 
-	$the_query = new WP_Query( $args );
- 
-	if ( $the_query->have_posts() ) :
-		ob_start();
-
-		while ( $the_query->have_posts() ) : $the_query->the_post();
-		get_template_part( 'template-parts/content-part-offer' );
-		endwhile;
-
-		$posts = ob_get_clean();
-	endif;
-
-	$return = array(
-		'posts' => $posts
-	);
-
-	wp_send_json($return);
-exit();
-}
-
-add_action( 'wp_ajax_filterposts', 'ajax_filterposts_handler' );
-add_action( 'wp_ajax_nopriv_filterposts', 'ajax_filterposts_handler' );
 
 // Register widget area.
 
@@ -241,14 +162,6 @@ function aqia_scripts() {
 	wp_enqueue_script('jQuery');
 	wp_enqueue_style( 'bootstrap-cdn-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' );
 	wp_enqueue_script( 'bootstrap-cdn-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js' );
-	wp_enqueue_style( 'slick-style',  get_template_directory_uri() . '/css/slick-theme.css');
-	wp_register_script( 'slider', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', null, null, true );
-	wp_enqueue_script('slider');
-	
-	//wp_enqueue_script( 'masnry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js' );
-	wp_enqueue_script( 'pdf-object', 'https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.js', array(), true );
-
-	
 	
 
 	wp_enqueue_script( 'aqia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -259,73 +172,16 @@ function aqia_scripts() {
 
 	wp_enqueue_script( 'aqia-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_style( 'aqia-style', get_stylesheet_uri() );
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	$the_theme     = wp_get_theme();
+		$theme_version = $the_theme->get( 'Version' );
+
+		$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme.min.css' );
+		wp_enqueue_style( 'tdcc-styles', get_template_directory_uri() . '/css/theme.min.css', array(), $css_version );
 }
 add_action( 'wp_enqueue_scripts', 'aqia_scripts' );
 
 
-// Register and load the widget
-function wpb_load_widget() {
-    register_widget( 'skal_widget' );
-}
-add_action( 'widgets_init', 'wpb_load_widget' );
- 
-// Creating the widget 
-class skal_widget extends WP_Widget {
- 
-	function __construct() {
-		parent::__construct('skal_widget', __('AQIA Contact Details', 'skal_widget_domain'), 
-			// Widget description
-			array( 'description' => __( 'Widget for contact details', 'skal_widget_domain' ), ) 
-		);
-	}
- 
-// Creating widget front-end
- 
-	public function widget( $args, $instance ) {
-		$title = apply_filters( 'widget_title', $instance['title'] );
-	
-		// before and after widget arguments are defined by themes
-		echo $args['before_widget'];
-		if ( ! empty( $title ) )
-			echo $args['before_title'] . $title . $args['after_title'];
-	
-		// display the output
-		//echo __( 'Hello, World!', 'skal_widget_domain' );
-		
-		echo get_theme_mod( 'main_email' );
-		echo get_theme_mod( 'address' );
-		echo "<br>";
-		echo get_theme_mod( 'phone_number' );
-		echo $args['after_widget'];
-	}
-         
-	// Widget Backend 
-	public function form( $instance ) {
-		if ( isset( $instance[ 'title' ] ) ) {
-			$title = $instance[ 'title' ];
-		}
-		else {
-			$title = __( 'New title', 'skal_widget_domain' );
-		}
-	// Widget admin form
-		?>
-		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-		</p>
-		<?php 
-	}
-     
-// Updating widget replacing old instances with new
-public function update( $new_instance, $old_instance ) {
-$instance = array();
-$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-return $instance;
-}
-} // Class skal_widget ends here
+
 
 /**
  * Implement the Custom Header feature.

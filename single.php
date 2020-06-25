@@ -39,10 +39,7 @@ get_header();
 		<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
 
 	</header>
-	<div class="lead">
-
-
-</div>
+	<div class="lead"></div>
 	<div id="primary" class="post content-area container">
 		<main id="main" class="site-main">
 <!-- .entry-header -->
@@ -63,7 +60,6 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
 
 get_footer();

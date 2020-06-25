@@ -14,7 +14,10 @@
 
 	<?php // aqia_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content container">
+
+	<div class="row">
+			<div class="col-12">
 		<?php
 		the_content();
 
@@ -23,28 +26,17 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+</div></div></div><!-- .entry-content -->
+<?php
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'aqia' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+while(have_rows('module')) {
+	the_row();
+
+	tdcc_theme_partial('/modules/'.get_row_layout().'.php');
+}
+
+?>
+	
+
+	
 </article><!-- #post-<?php the_ID(); ?> -->
