@@ -70,13 +70,7 @@ Text Domain: aqia
 #feature-section .feature-block button i {
 		float:right;
 	}
-.feature-block .inner {
-	background: #fff;
-	padding: 18px 15px;
-	display: table;
-	width:100%;
-	height:100%;
-}
+
 
 
 .buttoncell{

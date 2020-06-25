@@ -33,7 +33,7 @@ switch ($layout) {
 <section id="flex">
 <div class="container">
     <div class="row">
-        <div class="<?php echo $leftcol; ?>">
+        <div class="<?php echo $leftcol; ?> p-2 inner">
         <?php 
         
         while(have_rows('left_side')) {
@@ -43,7 +43,7 @@ switch ($layout) {
         }
         ?>
         </div>
-        <div class="<?php echo $rightcol; ?>">
+        <div class="<?php echo $rightcol; ?> p-2 inner">
         <?php 
         
         while(have_rows('right_side')) {

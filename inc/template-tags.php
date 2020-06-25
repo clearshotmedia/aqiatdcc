@@ -99,3 +99,32 @@ if ( ! function_exists( 'aqia_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+add_action( 'wp_ajax_nopriv_ajax_pagination', 'my_ajax_pagination' );
+add_action( 'wp_ajax_ajax_pagination', 'my_ajax_pagination' );
+
+function my_ajax_pagination() {
+
+
+	$query_vars = json_decode( stripslashes( $_POST['query_vars'] ), true );
+
+	$query_vars['post_id'] = $_POST['postid'];
+	
+	
+	$posts = new WP_Query( $query_vars );
+	$GLOBALS['wp_query'] = $posts;
+	
+	echo '<div class="news-inner">';
+	echo '<h4>' . get_the_title($query_vars['post_id']) . '</h4>';
+	echo '<div class="news-excerpt">';
+	echo get_the_excerpt($query_vars['post_id']);
+	echo '</div>';
+	echo '<a href="' . get_the_permalink($query_vars['post_id']) . '">';
+	echo '<button>Read More</button></a>';
+	echo '</div>';
+
+
+
+
+    die();
+}

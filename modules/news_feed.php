@@ -6,15 +6,18 @@
 
 <section id="news-feed" class="module">
     <div class="container">
-        <div class="row no-gutters">
-            <div class="col-12"> <h2>Latest News</h2></div>
+        <div class="row ">
+        
             <div class="col-md-6">
-            <div id="newsout"></div>
+        
+            <div id="newsout">    </div>
                 <img src="<?php echo $background;?>" alt="background news">
             </div>
-            <div class="col-md-6 px-3 posts">
+            <div class="col-md-6 posts">
+            <div class="inner">
+            <h3>Latest News</h3>
             <?php foreach( $recent_posts as $recent ){  ?>
-            <a id="<?php echo $recent["ID"];?>" href="#"><div class="post-inner"  style="margin-bottom:5px;">
+            <a id="<?php echo $recent["ID"];?>" href="#"><div class="post-inner"  style="margin-bottom:10px;">
                 <div class="row">
                     <div class="col-sm-2 date"><h3>07
                     </h3><h6>JUL</h6></div>
@@ -28,7 +31,7 @@
                 
             
                 
-            </div>
+            </div></div>
             <div class="col-12 my-3 align-center">
                 <a href="/news"><button class="secondary-button">All News</button></a>
             </div>

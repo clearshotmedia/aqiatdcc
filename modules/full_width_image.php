@@ -12,7 +12,4 @@ if ($height == 'large') {
 ?>
 
 <section id="full_width_image" style="background:url('<?php echo $background; ?>'); background-size:cover; height:<?php echo $vh; ?>">
-</section><div class="lead">
-
-
-</div>
+</section>

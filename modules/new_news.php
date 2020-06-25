@@ -1,4 +1,4 @@
-
+<div class="container">
   <div class="row my-2">
     <div class="col-md-6 feature-block">
       <div class="inner">
@@ -30,4 +30,6 @@
        <?php echo do_shortcode( '[custom-facebook-feed]' );    ?>            
       </div>
     </div>
+  </div>
+
   </div>

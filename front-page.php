@@ -18,17 +18,19 @@ get_header();
 	<div class="content-home">
 		<main id="main" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'home' );
-
-			
-
-		endwhile; // End of the loop.
+		<?php get_template_part( 'template-parts/breadcrumbs' ); 
+		$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
 		?>
 
+	</header>
+	<div class="jumbotron entry-image" style="background:url('<?php echo $url; ?>'); background-position:center;background-size: cover;">
+	
+	
+		
+	</div>
+	<div class="lead">
+
+</div>
 <?php
 
 while(have_rows('module')) {

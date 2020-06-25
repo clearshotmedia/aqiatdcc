@@ -1,5 +1,12 @@
 #news-feed {
     padding-top:2rem;
+    .inner {
+        background: #fff;
+        padding: 18px 15px;
+        display: table;
+        width:100%;
+        height:100%;
+    }
     h2 {
         text-align:center;
         padding: 2rem 0;
@@ -9,7 +16,8 @@
         width:100%;
         height:100%;
     }
-    
+    .posts {
+    }
     div#newsout{
         position: absolute;
         height: 100%;
@@ -29,16 +37,17 @@
     
     .post-inner {
         width:100%;
-       padding: 1.7em 1em;
-        background:$light;
-        box-shadow: 4px 4px 4px #ccc;
+       padding: 0.5em 1em 0.8em 1em;
+       border: 1px solid #e0e0e0;
         .date {
             text-align:center;
             color:$secondary;
+            h6, h3 {
+                margin-bottom:0;
+            }
         }
         .news-heading {
             display:block;
-            text-transform:uppercase;
             font-weight:600;
         }
         .meta {
@@ -48,9 +57,16 @@
     }
 
     a.clicked .post-inner {
-        box-shadow: inset 0px 0px 4px 0px #ccc;
+        border: 2px solid #e0e0e0;
     }
     .middle {
         margin: 5px 0;
     }
+}
+.feature-block .inner {
+	background: #fff;
+	padding: 18px 15px;
+	display: table;
+	width:100%;
+	height:100%;
 }
