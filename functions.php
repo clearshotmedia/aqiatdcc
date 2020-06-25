@@ -105,83 +105,29 @@ endif;
 
 // Register widget area.
 
-function aqia_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer 1', 'aqia' ),
-		'id'			 => 'footer-1',
-		'before_widget'	 => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'	 => '</div>',
-		'before_title'	 => '<div class="widget-title"><h3>',
-		'after_title'	 => '</h3></div>',
-	) );
-	register_sidebar(
-		array(
-			'name'			 => esc_html__( 'Footer 2', 'aqia' ),
-			'id'			 => 'footer-2',
-			'before_widget'	 => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'	 => '</div>',
-			'before_title'	 => '<div class="widget-title"><h3>',
-			'after_title'	 => '</h3></div>',
-	));
-	register_sidebar(
-		array(
-			'name'			 => esc_html__( 'Footer 3', 'aqia' ),
-			'id'			 => 'footer-3',
-			'before_widget'	 => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'	 => '</div>',
-			'before_title'	 => '<div class="widget-title"><h3>',
-			'after_title'	 => '</h3></div>',
-	));
-	register_sidebar(
-		array(
-			'name'			 => esc_html__( 'Bottom Sidebar', 'aqia' ),
-			'id'			 => 'sidebar-1',
-			'before_widget'	 => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'	 => '</div>',
-			'before_title'	 => '<div class="sidebar-title"><h3>',
-			'after_title'	 => '</h3></div>',
-	));
-	register_sidebar(
-		array(
-			'name'			 => esc_html__( 'Left Sidebar', 'aqia' ),
-			'id'			 => 'sidebar-',
-			'before_widget'	 => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'	 => '</div>',
-			'before_title'	 => '<div class="sidebar-title"><h3>',
-			'after_title'	 => '</h3></div>',
-	));
 
+
+
+
+$tdcc_includes = array(
+	//'/theme-settings.php',                  // Initialize theme default settings.
+	'/template-functions.php',                           // Theme setup and custom theme supports.
+	'/widgets.php',                         // Register widget area.
+	'/enqueue.php',                         // Enqueue scripts and styles.
+	'/template-tags.php',                   // Custom template tags for this theme.
+	'/pagination.php',                      // Custom pagination for this theme.
+	'/hooks.php',                           // Custom hooks.
+	'/extras.php',                          // Custom functions that act independently of the theme templates.
+	'/customizer.php',                      // Customizer additions.
+	'/jetpack.php',                         // Load Jetpack compatibility file.
+	'/woocommerce.php',                     // Load WooCommerce functions.
+	'/editor.php',                          // Load Editor functions.
+	'/deprecated.php',                      // Load deprecated functions.
+);
+
+foreach ( $tdcc_includes as $file ) {
+	require_once get_template_directory() . '/inc' . $file;
 }
-add_action( 'widgets_init', 'aqia_widgets_init' );
-
-/**
- * Enqueue scripts and styles.
- */
-function aqia_scripts() {
-	wp_register_script( 'jQuery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js', null, null, true );
-	wp_enqueue_script('jQuery');
-	wp_enqueue_style( 'bootstrap-cdn-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' );
-	wp_enqueue_script( 'bootstrap-cdn-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js' );
-	
-
-	wp_enqueue_script( 'aqia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'aqia-customscript', get_template_directory_uri() . '/js/customscript.js', array( 'jquery' ), '', true );
-	
-	wp_enqueue_style( 'icofont', get_template_directory_uri() . '/fonts/icofont/icofont.min.css' );
-	
-
-	wp_enqueue_script( 'aqia-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	wp_enqueue_style( 'aqia-style', get_stylesheet_uri() );
-	$the_theme     = wp_get_theme();
-		$theme_version = $the_theme->get( 'Version' );
-
-		$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme.min.css' );
-		wp_enqueue_style( 'tdcc-styles', get_template_directory_uri() . '/css/theme.min.css', array(), $css_version );
-}
-add_action( 'wp_enqueue_scripts', 'aqia_scripts' );
-
-
-
 
 /**
  * Implement the Custom Header feature.
@@ -191,22 +137,4 @@ require get_template_directory() . '/inc/custom-header.php';
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
