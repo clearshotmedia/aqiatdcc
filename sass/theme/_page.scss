@@ -6,3 +6,103 @@
 .site-content, .page {
     background:$light;
 }
+
+
+hr.brand-primary {
+	border-top-color: #ddd;
+	margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h1.entry-title {
+	padding: 4px 0 2px 0;
+	margin:unset;
+	font-size:24px;
+	font-weight:400;
+}
+.current_page_item a {font-weight: 600;}
+
+.blog-header .entry-meta{float:right;}
+.news-header .entry-meta{float:right;}
+.col-md-6.menu-grid {padding: 5px 5px !important; }
+.side-nav {list-style: none;padding-inline-start: 0;}
+.side-nav-in {list-style: none;padding-inline-start: 0;}
+.side-nav-in li {padding-inline-start:15px !important;}
+.side-nav li {
+    background: #ececec;
+    padding: 6px 8px;
+	color: #505050;
+	border-left: 2px solid #505050;
+}
+i.icofont-thin-right {font-weight: 700;}
+.side-nav li:hover {
+    background: #fff;
+    padding: 7px 10px;
+	color: $secondary;
+	box-shadow: 0px 8px 20px #eee;
+	border-left: 2px solid #963c46;
+}
+
+.post-content{margin-bottom:20px;}
+.navigation-sidebar h4 { color: #4274b9;}
+.navigation-sidebar{margin-bottom:20px;}
+
+
+.blog-header {
+    padding: .75rem 1.25rem;
+	margin-bottom: 0;
+	overflow:overlay;
+    background-color: #4274b9 !important;
+	border-bottom: 1px solid #ddd !important;
+	color:#fff;
+}
+.news-header {
+    padding: .75rem 1.25rem;
+	margin-bottom: 0;
+	overflow:overlay;
+    background-color: #570b1b !important;
+	color:#fff;
+}
+.author {
+	margin-bottom:0;
+
+    font-size: 0.9rem;
+}
+@media only screen and (max-width: 992px){
+	.navigation-sidebar {
+		border-right: none !important;
+		border-top: 1px solid #ddd;
+		padding-top: 5px;
+	}
+	
+	.entry-image {height: 162px;}
+
+	.header-widget{text-align:center;}
+	.hero-section h2 {padding-bottom: 10px;}
+	.hero-section {padding-bottom: 10px;}
+	.feeds-section {padding: 10px 0;}
+	
+	.site-branding{text-align:center;}
+	
+	.hero-section .promo{text-align:center;}
+	.blog-header{text-align:center;}
+	.exc{text-align:center;}
+	
+	.blog-header .entry-meta {	
+		text-align: center;
+		width: 100%;
+		font-size: 12px;
+	}
+	ul#primary-menu {
+		border-top: 1px solid #e0e0e0;
+	}
+	
+	
+	.hero-section .col-lg-3 img {padding-right: 0px;width: 100%;padding: 4px 0;}
+
+	
+	/* Carousel overrides */
+	
+	
+	
+}

@@ -11,7 +11,7 @@
 	function initMainNavigation( container ) {
 
 		// Add dropdown toggle that displays child menu items.
-		var dropdownToggle = $( '<span />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
+		var dropdownToggle = $( '<span />', { 'class': 'dd-tog', 'aria-expanded': false })
 		
 		
 

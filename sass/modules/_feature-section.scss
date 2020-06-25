@@ -1,0 +1,39 @@
+
+#feature-section .feature-block h4 {
+	color:$secondary;
+}
+.feature-block .video p {margin-bottom:0;}
+@media only screen and (max-width: 992px){
+	.feature-block {
+	
+		margin-bottom: 20px;
+	}	
+}
+#feature-section .feature-block button {
+	background:none;
+	border:1px solid $secondary;
+	width:100%;
+	text-align: left;
+    margin: 0px 0 10px 0px;
+	color:$secondary;
+}
+#feature-section .feature-block button:hover {
+	background: $secondary;
+	color:#fff;
+	-webkit-transition:.5s ease;
+	transition: .5s ease;
+}
+
+#feature-section .feature-block button i {
+        float:right;
+        line-height:unset;
+	}
+
+
+    .buttoncell{
+        display:table-row-group;
+        vertical-align:bottom;
+        width:100%
+    }
+    
+    

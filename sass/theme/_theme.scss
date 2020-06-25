@@ -1,36 +1,48 @@
 @font-face {
-	font-family:'Open Sans';
-	font-weight:300;
-	font-style:normal;
-	src:url('../fonts/OpenSans-Light.ttf')  format('truetype');
-}
-@font-face {
-	font-family:'Open Sans';
-	font-weight:400;
-	font-style:normal;
-	src:url('../fonts/OpenSans-Regular.ttf')  format('truetype');
-}
-@font-face {
-	font-family:'Open Sans';
-	font-weight:600;
-	font-style:normal;
-	src:url('../fonts/OpenSans-SemiBold.ttf')  format('truetype');
-}
-@font-face {
-	font-family:'Open Sans';
-	font-weight:700;
-	font-style:normal;
-	src:url('../fonts/OpenSans-Bold.ttf')  format('truetype');
-}
-@font-face {
-	font-family:'Open Sans';
-	font-weight:900;
-	font-style:normal;
-	src:url('../fonts/OpenSans-ExtraBold.ttf')  format('truetype');
-}
-@font-face {
-	font-family:'Tondu';
-	font-weight:500;
-	font-style:normal;
-	src:url('../fonts/Tondu_Beta.ttf')  format('truetype');
-}
+	font-family: 'GetLost';
+	src: url('../fonts/GetLost.ttf');
+	font-style:   normal;
+	font-stretch: normal;
+	}
+	
+	
+		@font-face {
+			font-family: 'Avenir';
+			src: url('../fonts/Avenir-Book-01.ttf');
+			font-weight:  400;
+			}
+
+		@font-face {
+			font-family: 'Roboto';
+			src: url('../fonts/Roboto-Thin.ttf');
+			font-weight: 100;
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('../fonts/Roboto-Light.ttf');
+			font-weight: 300;	
+			}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('../fonts/Roboto-Regular.ttf');
+			font-weight: 400;	
+			}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('../fonts/Roboto-Medium.ttf');
+			font-weight: 500;
+			
+			}	
+		@font-face {
+			font-family: 'Roboto';
+			src: url('../fonts/Roboto-Bold.ttf');
+			font-weight: 700;
+			
+			}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('../fonts/Roboto-Black.ttf');
+			font-weight: 900;
+			
+			}	
+

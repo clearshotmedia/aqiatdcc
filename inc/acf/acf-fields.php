@@ -95,40 +95,7 @@ function my_acf_add_post_field_groups() {
         'description' => '',
     ));
 	
-	acf_add_local_field_group(array(
-		'key' => 'research_pdf',
-		'title' => 'Research / Publication Details',
-		'fields' => array (
-			array (
-				'key' => 'post_pdf',
-				'label' => 'Research / Publication PDF Upload',
-				'name' => 'pub_pdf',
-				'type' => 'file',
-            ),
-            array (
-				'key' => 'author',
-				'label' => 'Author',
-				'name' => 'author_name',
-				'type' => 'text',
-            ),
-            array (
-				'key' => 'avatar',
-				'label' => 'Author Avatar',
-				'name' => 'author_avatar',
-                'type' => 'image',
-                'return_format' => 'url',
-			)
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'post',
-				),
-			),
-		),
-    ));
+	
 }
 add_action('acf/init', 'my_acf_add_post_field_groups');
 

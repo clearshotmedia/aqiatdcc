@@ -33,7 +33,8 @@ switch ($layout) {
 <section id="flex">
 <div class="container">
     <div class="row">
-        <div class="<?php echo $leftcol; ?> p-2 inner">
+        <div class="<?php echo $leftcol; ?> ">
+        <div class="inner">
         <?php 
         
         while(have_rows('left_side')) {
@@ -43,7 +44,9 @@ switch ($layout) {
         }
         ?>
         </div>
-        <div class="<?php echo $rightcol; ?> p-2 inner">
+        </div>
+        <div class="<?php echo $rightcol; ?> ">
+        <div class="inner">
         <?php 
         
         while(have_rows('right_side')) {
@@ -51,7 +54,7 @@ switch ($layout) {
         
             tdcc_theme_partial('/modules/'.get_row_layout().'.php');
         }
-        ?>
+        ?> </div>
         </div>
     </div>
 </div>

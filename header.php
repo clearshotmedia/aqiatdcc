@@ -34,8 +34,8 @@
     <span class="tagline">tagline</span><a href="#"><i class="icofont-facebook"></i></a> <a href="#"><i class="icofont-twitter"></i></a>  <a href="#"><i class="icofont-envelope"></i></a>
 </div>
 		</div>
-</div> <div class="row">
-<div class=" d-none d-lg-block">
+</div> <div class="row align-center">
+<div class="col-12 d-none d-lg-block">
    
    
 		<nav id="site-navigation" class="main-navigation ">

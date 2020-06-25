@@ -211,3 +211,106 @@
     .menu-toggle {display: block;}
     
   }
+  .main-navigation .menu li {
+    list-style: none;
+    color:#999;
+    display:inline-block;
+  }
+  .main-navigation .menu li:hover {
+    list-style: none;
+    color:$secondary;
+    display:inline-block;
+  }
+  div#breadcrumb { background: #ececec;}
+  .breadcrumbs {
+  font-size: .875em;
+  text-align: left;
+  padding: 4px 0;
+  color: #505050;
+  }
+  .breadcrumbs.has-full-width {
+  padding-right: 120px;
+  padding-left: 120px;
+  }
+  .breadcrumbs ul {padding: 0;margin: 0;}
+  .breadcrumbs .delimiter {
+  padding: 0 4px;
+  color: #a8a8a8;
+  }
+  .breadcrumbs li {
+  display: inline-block;
+  padding: 0 2px;
+  }
+  .trail-items li::after {
+  content: "" !important;
+  padding: 0 !important;
+  }
+  .entry-meta{text-align:right; }
+  .breadcrumbs li a {
+  color: #505050;
+  }
+  li.trail-item.trail-end {font-weight: 700;}
+  .breadcrumbs ul li a:after {
+  content: ">";
+  display: block;
+  float: right;
+  margin-left: 4px;
+  padding: 0 4px;
+  color: #505050;
+  }
+  .breadcrumbs li a:hover {
+  color: #181818;
+  text-decoration: none;
+  }
+  .elearn{
+    color:#fff;
+    min-height: 30px;
+    text-align: right;
+    display: block;
+    font-size: 14px;
+    padding: 5px 0 0 0;
+  }
+
+  header#masthead {
+    position: relative;
+    display: block;
+}
+
+
+.fa-ul ul.children {
+	list-style: none;
+    position: relative;
+    padding: 0;
+}
+
+.entry-image {
+    height: 230px;
+	overflow: hidden;
+	border-radius: 0;
+}
+.main-title{
+	font-family: 'Gotham', Arial, Helvetica, sans-serif;
+	font-size: 40px;
+	color:#fff;
+	text-align:center;
+	display: table-cell;
+	vertical-align: middle;
+    text-shadow: 2px 2px 17px #1d1d1d;
+    text-transform: uppercase;
+}
+
+.custom-logo-link {display: inline-block;}
+img.custom-logo {
+    max-height: 105px;
+    width: auto;
+}
+li.current_page_item>ul>li.page_item a {
+	font-weight: 400;
+	display:list-item !important;
+}
+.current_page_item ul.children {
+	font-weight: 400;
+	display: list-item;
+}
+ul.children {display: none;}
+

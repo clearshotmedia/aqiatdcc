@@ -14,15 +14,6 @@
 <div class="row">
 	<div class="post-content   col-lg-12">
 
-	
-   <?php 
-$file = get_field('pub_pdf');
-
-if( $file ): ?>
-	<div id="embed"></div>	
-		<script>PDFObject.embed("<?php echo $file['url']; ?>", "#embed");</script>
-	
-<?php endif; ?>
 
 
 	

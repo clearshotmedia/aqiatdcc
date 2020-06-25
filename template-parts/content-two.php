@@ -14,7 +14,7 @@
 
 
 	
-<div class="row">
+<div class="row py-4">
 <div class=" order-lg-2  col-lg-9">
 		<?php
 		the_content();
@@ -28,7 +28,7 @@
 	<div class="left-sidebar col-lg-3 order-lg-1">
 
 	<div class="navigation-sidebar">
-		<div><h4>Services</h4></div>
+		
   <ul class="side-nav">
   <li> <a href="/club-and-association-admin">Organisation and Club Admin</a></li>
          <li> <a href="/grants-and-funding">Grants</a></li>
@@ -43,8 +43,7 @@
   <li> <a href="/research-and-publications">Research and Publications</a></li>
   
 </ul>
-<a href="/survey">
-<img src="/wp-content/uploads/2019/07/SkillsSurvey_promo.png"></a>
+
 	</div>
 
 	</div>
@@ -53,33 +52,6 @@
 </div>
 
 	
-		<footer class="entry-footer">
-         <hr class="brand primary" >
-		<div id="partners" class="smaller container ">
-			<div class="row ">
-                <div class="col-12">
-					<h3>Members & Partners</h3>
-            
- 
-               <section class="customer-logos slider">
-               <?php
-	if( have_rows('partner', 'option') ):	
- 	// loop through the rows of data
-	while ( have_rows('partner', 'option') ) : the_row();
-	?>  <div class="slide"><a href="
-	<?php echo the_sub_field('partner_link'); ?>"><img src="<?php echo the_sub_field('partner_image');?>"> </a></div><?php
-    endwhile;
-		else :
-    // no rows found
-	endif; ?>
-     
-   </section>
-   
-   
-
-
-                </div>
-            </div></div>
-		</footer><!-- .entry-footer -->
+		
 
 </article><!-- #post-<?php the_ID(); ?> -->

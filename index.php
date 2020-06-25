@@ -133,27 +133,6 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<footer class="entry-footer">
-		<div id="partners" class="smaller container ">
-			<div class="row ">
-                <div class="col-12">
-					<h3>Members & Partners</h3>
-            
- 
-					<section class="customer-logos slider">
-      <div class="slide"><a href="https://fitness.org.au/"><img src="/wp-content/uploads/2019/07/Fitness-Australia-Logo1.jpg"></a></div>
-      <div class="slide"><a href="https://www.qsport.org.au/home/"><img src="/wp-content/uploads/2019/07/qSport_Stacked.png"></a></div>
-      <div class="slide"><a href="https://qorf.org.au/"><img src="/wp-content/uploads/2019/07/qorf.png"></a></div>
-      <div class="slide"><a href="https://sportscommunity.com.au/aqia-signup/"><img src="/wp-content/uploads/2019/07/Sports-Community-Logo.jpg"></a></div>
-      <div class="slide"><a href="https://www.qld.gov.au"><img src="/wp-content/uploads/2019/08/Queensland-Government-Logo.png"></a></div>
-      <div class="slide"><a href="http://tdcommunitysolutions.com.au/Public/terry-dillon-solutions/importance-of-community-administration.aspx"><img src="/wp-content/uploads/2019/08/TD_Solutions_Transparent.png"></a></div>
-      
-   </section>
-   
-
-
-                </div>
-            </div></div>
-		</footer><!-- .entry-footer -->
+	
 <?php
 get_footer();

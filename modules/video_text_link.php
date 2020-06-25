@@ -21,9 +21,9 @@
         <p><?php  echo $video_text; ?></p>
 
         <div class="buttoncell">
-        <a href="<?php echo $button_1['link']; ?>"><button class="feature"><?php echo $button_1['text'];?><i class="icofont-thin-right"></i></button></a></div>
+        <a href="<?php echo $button_1['url']; ?>"><button class="feature"><?php echo $button_1['title'];?><i class="icofont-thin-right"></i></button></a></div>
       <div class="buttoncell">
-      <a href="<?php echo $button_2['link']; ?>"><button class="feature"><?php echo $button_2['text'];?><i class="icofont-thin-right"></i></button></a></div></div>
+      <a href="<?php echo $button_2['url']; ?>"><button class="feature"><?php echo $button_2['title'];?><i class="icofont-thin-right"></i></button></a></div></div>
         </div>
 </div>
       </div>
