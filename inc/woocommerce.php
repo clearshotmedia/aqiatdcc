@@ -39,7 +39,23 @@ function tdcc_template_loop_product_title() {
 	echo '<h6 class="' . esc_attr( apply_filters( 'woocommerce_product_loop_title_classes', 'product-title' ) ) . '">' . get_the_title() . '</h6>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
 
+/* Register sidebars */ 
 
+function tdcc_my_custom_widgets_init() {
+
+	register_sidebar( array(
+	  'name'          => __( 'My Shop Sidebar', '__tdcc__' ),
+	  'id'            => 'sidebar-my-custom-shop',
+	  'description'   => __( 'Appears on the index shop page.', '__tdcc__' ),
+	  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	  'after_widget'  => '</div>',
+	  'before_title'  => '<h5 class="h-widget">',
+	  'after_title'   => '</h5>',
+	) );
+  
+  }
+  
+  add_action( 'widgets_init', 'tdcc_my_custom_widgets_init' );
 /*************Start Checkout edit *****************/ 
 
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
@@ -109,7 +125,7 @@ if ( ! function_exists( 'tdcc_woocommerce_wrapper_start' ) ) {
 	function tdcc_woocommerce_wrapper_start() {
 		$container = get_theme_mod( 'tdcc_container_type' );
 		
-		echo '<header class="entry-header">';
+		echo '<header class="entry-header-title">';
 		get_template_part( 'page-templates/breadcrumbs' ); 
 		echo '<div class="container"><div class="row"><div class="col-12"><h1 class="entry-title">';
 		woocommerce_page_title();
@@ -117,11 +133,11 @@ if ( ! function_exists( 'tdcc_woocommerce_wrapper_start' ) ) {
 		
 		echo '</div></div></div></header>';
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
-		echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
+		echo '<div class="container" id="content" tabindex="-1">';
 		echo '<div class="row">';
 	//	get_template_part( 'global-templates/left-sidebar-check' );
-		echo '<div class="col-md-4">';
-		dynamic_sidebar( 'sidebar-my-custom-shop' );
+		echo '<div class="col-md-4 gghh">';
+		do_action( 'woocommerce_sidebar' );
 		echo '</div>';
 		echo '<div class="col-md-8">';
 		echo '<main class="site-main" id="main">';
@@ -139,23 +155,7 @@ if ( ! function_exists( 'tdcc_woocommerce_wrapper_end' ) ) {
 }
 
 
-/* Register sidebars */ 
 
-function tdcc_my_custom_widgets_init() {
-
-	register_sidebar( array(
-	  'name'          => __( 'My Shop Sidebar', '__tdcc__' ),
-	  'id'            => 'sidebar-my-custom-shop',
-	  'description'   => __( 'Appears on the index shop page.', '__tdcc__' ),
-	  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	  'after_widget'  => '</div>',
-	  'before_title'  => '<h5 class="h-widget">',
-	  'after_title'   => '</h5>',
-	) );
-  
-  }
-  
-  add_action( 'widgets_init', 'tdcc_my_custom_widgets_init' );
 
 
 /**

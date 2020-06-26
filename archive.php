@@ -17,19 +17,13 @@ $container = get_theme_mod( 'tdcc_container_type' );
 ?>
 <header class="entry-header">
 	<?php get_template_part( 'page-templates/breadcrumbs' ); ?>
-	<div class="container">
-		<div class="row">
-		<div class="col-12">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</div>
-		</div>
-	</div>
+	
 	
 
 	</header><!-- .entry-header -->
 <div class="wrapper" id="ffff archive-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container" id="content" tabindex="-1">
 
 		<div class="row">
 

@@ -44,7 +44,7 @@ i.icofont-thin-right {font-weight: 700;}
 }
 
 .post-content{margin-bottom:20px;}
-.navigation-sidebar h4 { color: #4274b9;}
+.navigation-sidebar h4 { color: $primary;}
 .navigation-sidebar{margin-bottom:20px;}
 
 
@@ -52,7 +52,7 @@ i.icofont-thin-right {font-weight: 700;}
     padding: .75rem 1.25rem;
 	margin-bottom: 0;
 	overflow:overlay;
-    background-color: #4274b9 !important;
+    background-color: $primary !important;
 	border-bottom: 1px solid #ddd !important;
 	color:#fff;
 }
@@ -60,7 +60,7 @@ i.icofont-thin-right {font-weight: 700;}
     padding: .75rem 1.25rem;
 	margin-bottom: 0;
 	overflow:overlay;
-    background-color: #570b1b !important;
+    background-color: $primary !important;
 	color:#fff;
 }
 .author {

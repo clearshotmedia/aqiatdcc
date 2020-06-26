@@ -22,7 +22,7 @@
       <?php echo $column_1['text'];  ?>
       </p>
       <div class="buttoncell">
-      <a href="<?php echo $column_1['link']; ?>"> <button class="feature"><?php echo $column_1['link_text'];  ?> <i class="icofont-thin-right"></i></button></a>
+      <a href="<?php echo $column_1['link']['url']; ?>"> <button class="feature"><?php echo $column_1['link']['title'];  ?> <i class="icofont-thin-right"></i></button></a>
     </div></div>
     </div>
     <div class="col-md-4 feature-block">  <div class="inner">
@@ -31,14 +31,14 @@
       <?php echo $column_2['text'];?>
       </p>
       <div class="buttoncell">
-      <a href="<?php echo $column_2['link']; ?>"> <button class="feature"><?php echo $column_2['link_text'];?> <i class="icofont-thin-right"></i></button></a></div>
+      <a href="<?php echo $column_2['link']['url']; ?>"> <button class="feature"><?php echo $column_2['link']['title'];?> <i class="icofont-thin-right"></i></button></a></div>
     </div> </div>
     <div class="col-md-4 feature-block">  <div class="inner">
       <h4><?php echo $column_3['title'];?></h4>
       <p>
       <?php echo $column_3['text'];?>
       </p><div class="buttoncell">
-      <a href="<?php echo $column_3['link']; ?>"> <button class="feature"><?php echo $column_3['link_text'];?><i class="icofont-thin-right"></i></button></a></div>
+      <a href="<?php echo $column_3['link']['url']; ?>"> <button class="feature"><?php echo $column_3['link']['title'];?><i class="icofont-thin-right"></i></button></a></div>
     </div> </div>
   </div>
   </div>

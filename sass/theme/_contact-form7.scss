@@ -47,16 +47,19 @@
     @extend .button;
     height:auto;
     width:100%;
+    margin:5px 0;
     max-width:100%;
   }
 
   .wpcf7-form {
-    background:$light;
+    background:$white;
     padding:2rem;
-    box-shadow: 3px 2px 20px $light-grey;
+    margin: -18px -15px;
+   
     // set paragraphs to behave like divs with class .form-group
     p {
-    //  @extend .form-group;
+      @extend .form-group;
+      margin-bottom:3px;
     }
 
     // let labels be 100%

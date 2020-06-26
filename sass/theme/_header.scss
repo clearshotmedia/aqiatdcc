@@ -1,33 +1,38 @@
 .entry-header{
 	background:$secondary;
-	color:#fff;
+	color:$white;
 	min-height:33px;
 	opacity: 0.8;
+}
+.entry-header-title {
+  background:$primary;
+	color:$white;
+	min-height:33px;
+	
 }
 .main-header {
   background:$white;
 }
 .site-branding{
-  /*	display:inline-block;*/
+  
     padding-top: 3px;
     padding-bottom: 3px;
-    /*margin-right: 15px;*/
+    img {
+      display: block;
+      width: auto;
+      max-width:unset;
+      max-height: 104px;
+      -webkit-transition:.5s ease;
+      transition: .5s ease;
+    }
   }
-  .site-branding img {
-    display: block;
-    /*margin-right: 15px;*/
-    width: auto;
-    max-width:unset;
-    max-height: 104px;
-    -webkit-transition:.5s ease;
-    transition: .5s ease;
-  }
+  
   .shrink{ box-shadow: 0px -1px 11px #808080;}
   .shrink .site-branding img {max-height: 76px;}
   .search{
     float:right;
     font-size:30px;
-    color:#000;
+    color:$black;
   }
   .nav-toggle {
     cursor: pointer;
@@ -48,7 +53,7 @@
     top: -20px;
   }
   .nav-toggle .bar {
-    background-color: #000;
+    background-color: $black;
     display: block;
     height: 2px;
     margin-top: 0;
@@ -79,18 +84,21 @@
   }
   .tagline{
     font-family: 'GetLost';
-    color:#fab702;
+    color:$primary;
     text-shadow: 0px 4px 4px #d6d6d6a6;
     padding: 7px 10px;
     display:inline-block;
     font-size: 21px;
     letter-spacing: 0.05rem;
   }
-  .header-widget{float:right;}
-  .header-widget a {
-    padding: 0 1px;
-    font-size:12px;
+  .header-widget{
+    float:right;
+    a {
+      padding: 0 1px;
+      font-size:12px;
+    }
   }
+   
   .site-nav {
     background: #fff;
     opacity: 0;
@@ -101,6 +109,10 @@
     transform: translateY( 1rem );
     transition: opacity .3s ease-in-out, transform .3s ease-in-out, left 0s .3s, right 0s .3s;
     z-index: 20;
+    .menus {
+      overflow: auto;
+      max-height: 100%;
+    }
   }
   .shrink.active{box-shadow:none !important;}
   .site-nav.active {
@@ -112,10 +124,7 @@
     transform: translateY( 0 );
     transition: opacity .3s ease-in-out, transform .3s ease-in-out;
   }
-  .site-nav .menus {
-    overflow: auto;
-    max-height: 100%;
-  }
+   
   .header-widget a i {
     padding: 4px;
     border-radius: 50%;
@@ -223,32 +232,42 @@
   }
   div#breadcrumb { background: #ececec;}
   .breadcrumbs {
-  font-size: .875em;
-  text-align: left;
-  padding: 4px 0;
-  color: #505050;
+    font-size: .875em;
+    text-align: left;
+    padding: 4px 0;
+    color: #505050;
+    
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    .delimiter {
+      padding: 0 4px;
+      color: #a8a8a8;
+      }
+    li {
+        display: inline-block;
+        padding: 0 2px;
+        a {
+          color: #505050;
+          &:hover {
+            color: #181818;
+            text-decoration: none;
+          }
+          }
+        }
   }
   .breadcrumbs.has-full-width {
   padding-right: 120px;
   padding-left: 120px;
   }
-  .breadcrumbs ul {padding: 0;margin: 0;}
-  .breadcrumbs .delimiter {
-  padding: 0 4px;
-  color: #a8a8a8;
-  }
-  .breadcrumbs li {
-  display: inline-block;
-  padding: 0 2px;
-  }
+  
   .trail-items li::after {
   content: "" !important;
   padding: 0 !important;
   }
   .entry-meta{text-align:right; }
-  .breadcrumbs li a {
-  color: #505050;
-  }
+ 
   li.trail-item.trail-end {font-weight: 700;}
   .breadcrumbs ul li a:after {
   content: ">";
@@ -258,12 +277,9 @@
   padding: 0 4px;
   color: #505050;
   }
-  .breadcrumbs li a:hover {
-  color: #181818;
-  text-decoration: none;
-  }
+ 
   .elearn{
-    color:#fff;
+    color:$white;
     min-height: 30px;
     text-align: right;
     display: block;
@@ -291,7 +307,7 @@
 .main-title{
 	font-family: 'Gotham', Arial, Helvetica, sans-serif;
 	font-size: 40px;
-	color:#fff;
+	color:$white;
 	text-align:center;
 	display: table-cell;
 	vertical-align: middle;

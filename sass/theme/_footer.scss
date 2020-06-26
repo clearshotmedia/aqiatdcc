@@ -1,4 +1,4 @@
-.site-footer{background:#570b1b; color:#fff;}
+.site-footer{background:$primary; color:$white;}
 .site-info{
 	font-size:12px;
 	text-align:center;
@@ -17,11 +17,11 @@
 div#skal_widget-2 {  font-size: 14px;}
 .footer-main {font-size: 14px;}
 .social { font-size: 20px;}
-.social i.icofont-facebook {color: #fff;}
-.social i.icofont-linkedin {color: #fff;}
+.social i.icofont-facebook {color: $white;}
+.social i.icofont-linkedin {color: $white;}
 .footer-main .row {text-align: center;}
 .footer-1 {text-align: center;}
 .footer-3 {text-align: center;}
 .entry-footer{
-	background:#fff;
+	background:$white;
 }
