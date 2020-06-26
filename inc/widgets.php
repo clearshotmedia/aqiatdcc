@@ -37,13 +37,18 @@
 	register_sidebar(
 		array(
 			'name'			 => esc_html__( 'Left Sidebar', 'aqia' ),
-			'id'			 => 'sidebar-',
+			'id'			 => 'sidebar-left',
 			'before_widget'	 => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'	 => '</div>',
 			'before_title'	 => '<div class="sidebar-title"><h3>',
 			'after_title'	 => '</h3></div>',
 	));
 
+
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'primary' => __( 'Sidebar Menu', 'aqia' ),
+	) );
 }
 add_action( 'widgets_init', 'aqia_widgets_init' );
 

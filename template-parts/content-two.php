@@ -29,6 +29,11 @@
 
 	<div class="navigation-sidebar">
 		
+
+		<?php dynamic_sidebar( 'sidebar-left' ); ?>
+
+
+		
   <ul class="side-nav">
   <li> <a href="/club-and-association-admin">Organisation and Club Admin</a></li>
          <li> <a href="/grants-and-funding">Grants</a></li>
