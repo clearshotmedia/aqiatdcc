@@ -45,10 +45,7 @@
 	));
 
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => __( 'Sidebar Menu', 'aqia' ),
-	) );
+	
 }
 add_action( 'widgets_init', 'aqia_widgets_init' );
 

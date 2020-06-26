@@ -29,25 +29,26 @@
 
 	<div class="navigation-sidebar">
 		
+	
+<div class="nav--menu">
+<?php  /* menu */
+                    wp_nav_menu( array(
+                                'menu'              => 'mycricket',
+                                'theme_location'    => 'mycricket',
+                                'depth'             => 5,
+                                'container'         => 'div',
+                                'container_class'   => ' heelo  ',
+                                'menu_class'        => 'nav navbar-nav  ',
+								)
+                    ); 
+                 ?>
+</div>
+               
+            
 
-		<?php dynamic_sidebar( 'sidebar-left' ); ?>
 
 
-		
-  <ul class="side-nav">
-  <li> <a href="/club-and-association-admin">Organisation and Club Admin</a></li>
-         <li> <a href="/grants-and-funding">Grants</a></li>
-         <li> <a href="/legal">Legal</a></li>
-  <li> <a href="/hr">HR</a></li>
-  <li> <a href="/workforce-development">Workforce Development</a></li>
-         <ul class="side-nav-in">
-            <li><a href="/workforce-development/advocacy-and-engagement/"><i class="icofont-thin-right"></i>Advocacy and Engagement </a></li>
-            <li><a href="/workforce-development/national-training-package/"><i class="icofont-thin-right"></i>National Training Package</a></li>
-            <li><a href="/workforce-development/skilling-qld/"><i class="icofont-thin-right"></i>Skilling QLD'ers for Work</a></li>
-         </ul>
-  <li> <a href="/research-and-publications">Research and Publications</a></li>
-  
-</ul>
+
 
 	</div>
 

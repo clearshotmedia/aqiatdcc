@@ -6,6 +6,8 @@
  */
 
 (function( $ ) {
+
+	
 	var masthead, menuToggle, siteNavContain, siteNavigation;
 
 	function initMainNavigation( container ) {
@@ -105,4 +107,8 @@
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		});
 	})();
+
+
+
+
 })( jQuery );

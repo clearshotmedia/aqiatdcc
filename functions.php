@@ -26,6 +26,7 @@ if ( ! function_exists( 'aqia_setup' ) ) :
 		// Register Menus
 		register_nav_menus( array(
 			'main_menu'		 => esc_html__( 'Main Menu', 'aqia' ),
+			'mycricket' => __( 'Sidebar Menu', 'aqia' ),
 			'main_menu_mob' => esc_html__( 'Mobile main menu', 'aqia' ),
 		) );
 		add_theme_support( 'html5', array('search-form') );
@@ -127,6 +128,7 @@ $tdcc_includes = array(
 	'/customizer.php',                      // Customizer additions.
 	'/jetpack.php',                         // Load Jetpack compatibility file.
 	'/woocommerce.php',                     // Load WooCommerce functions.
+
 	'/editor.php',                          // Load Editor functions.
 	'/deprecated.php',                      // Load deprecated functions.
 );
