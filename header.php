@@ -31,7 +31,7 @@
 
 		<div class=" col-3 d-none d-lg-block ">
 		<div class="header-widget">
-    <span class="tagline">tagline</span><a href="#"><i class="icofont-facebook"></i></a> <a href="#"><i class="icofont-twitter"></i></a>  <a href="#"><i class="icofont-envelope"></i></a>
+    <span class="tagline"><?php echo the_field('header_tagline', 'option');?></span><a href="<?php echo the_field('facebook_link', 'option'); ?>"><i class="icofont-facebook"></i></a> <a href="<?php echo the_field('twitter_link', 'option'); ?>"><i class="icofont-twitter"></i></a>  <a href="mailto:<?php echo the_field('email_address', 'option'); ?>"><i class="icofont-envelope"></i></a>
 </div>
 		</div>
 </div> <div class="row align-center">
@@ -78,8 +78,8 @@
 			) );
 			?>
 				<div class="col-12 header-widget">
-				<span class="tagline">tagline</span>
-				<a href="#"><i class="icofont-facebook"></i></a> <a href="#"><i class="icofont-twitter"></i></a>  <a href="#"><i class="icofont-envelope"></i></a></div>
+				<span class="tagline"><?php echo the_field('header_tagline', 'option');?></span>
+				<a href="<?php echo the_field('facebook_link', 'option'); ?>"><i class="icofont-facebook"></i></a> <a href="<?php echo the_field('twitter_link', 'option'); ?>"><i class="icofont-twitter"></i></a>  <a href="mailto:<?php echo the_field('email_address', 'option'); ?>"><i class="icofont-envelope"></i></a></div>
         </div></div>
 
         </div>
@@ -92,9 +92,14 @@
 	</nav>
 
 	</div>
+	<?php $link = get_field('sub_header_link', 'option'); ?>
 	<header class="entry-header ">
 	<div class="container">
-    <div class="row"> <div class="col align-self-end"><a href="#" target="_blank" class="elearn">link <i class="icofont-swoosh-right"></i></a></div></div>
+	<div class="row"> <div class="col align-self-end"><a href="<?php 
+	echo $link['url'];
+	?>" target="_blank" class="elearn"><?php 
+	echo $link['title'];
+	?> <i class="icofont-swoosh-right"></i></a></div></div>
 		</div>
 		
 		<?php get_template_part( 'template-parts/breadcrumbs' ); ?>

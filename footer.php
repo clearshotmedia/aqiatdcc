@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="footer-main container my-1">
+		<div class="footer-main container py-2">
 			<div class="row ">
 			<div class="col-md-4  footer-1">
 				
@@ -49,7 +49,7 @@
 			</a>
 		</div>
 		<div class="col-4 social alignright">
-		<a href="#"><i class="icofont-facebook"></i></a> <a href="#"><i class="icofont-twitter"></i></a>
+		<a href="<?php echo the_field('facebook_link', 'option'); ?>"><i class="icofont-facebook"></i></a> <a href="<?php echo the_field('twitter_link', 'option'); ?>"><i class="icofont-twitter"></i></a>
 		
 		</div>
 

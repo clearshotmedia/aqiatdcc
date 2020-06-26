@@ -64,24 +64,30 @@ include_once( MY_ACF_PATH . 'pro/acf-pro.php' );
 include_once( MY_ACF_PATH . 'acf-fields.php' );
 
 
-if( function_exists('acf_add_options_page') ) {
-	$arg = acf_add_options_page(array(
-		'page_title' 	=> 'Theme General Settings',
-		'menu_title'	=> 'Theme Settings',
-		'menu_slug' 	=> 'theme-general-options',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
-	
-	
-	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Theme Footer Settings',
-		'menu_title'	=> 'Footer',
-		'parent_slug'	=> 'theme-general-options',
-	));
 
-}
+if( function_exists('acf_add_options_page') ) {
+	// Adds ACF Pro options page for Global Options
+	$globalOptions = acf_add_options_page(array(
+		'page_title'  => 'Club Information',
+		'menu_title' => 'Club Information',
+		'menu_slug'  => 'club-info',
+		'capability' => 'edit_posts',
+		'redirect'  => false
+	));
+  
+	// Adds ACF Pro sub options page for Header
+	acf_add_options_sub_page(array(
+	  'page_title'  => 'Header Settings',
+	  'menu_title'  => 'Header',
+	  'parent_slug'   => $globalOptions['menu_slug'],
+	));
+	// Adds ACF Pro sub options page for Footer
+	acf_add_options_sub_page(array(
+	  'page_title'  => 'Footer Settings',
+	  'menu_title'  => 'Footer',
+	  'parent_slug'   => $globalOptions['menu_slug'],
+	));
+  }
 // Customize the url setting to fix incorrect asset URLs.
 add_filter('acf/settings/url', 'my_acf_settings_url');
 function my_acf_settings_url( $url ) {
