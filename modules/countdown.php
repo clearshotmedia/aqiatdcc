@@ -39,7 +39,7 @@ if( $post_object ):
         <li><span id="seconds"></span>Seconds</li>
         </ul></div>
         <div class="col-md-2">
-            <button class="secondary-button">View Results</button>
+            <button class="secondary-button">View Results <i class="icofont-thin-right"></i></button>
            
         </div>
         <hr class="separator">

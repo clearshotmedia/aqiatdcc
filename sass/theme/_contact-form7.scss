@@ -56,12 +56,22 @@
     padding:2rem;
     margin: -18px -15px;
    
+
+
+    div.wpcf7-response-output {
+      margin: 0.4em 0;
+      padding: 0.2em 1em;
+      border-radius:0;
+      border: 2px solid #ff0000;
+  }
     // set paragraphs to behave like divs with class .form-group
     p {
       @extend .form-group;
       margin-bottom:3px;
     }
-
+    .ajax-loader {
+      display:none;
+    }
     // let labels be 100%
     label {
       width: 100%;

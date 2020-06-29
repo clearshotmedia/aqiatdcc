@@ -59,7 +59,7 @@ h3{
 	font-size:35px;
 	margin-bottom:25px;
 	font-weight:500;
-	color:$secondary;
+	color:$primary;
 }
 h4{
 	font-size:20px;
@@ -92,7 +92,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background:$secondary;;
+	background:$primary;
 	color:#fff;
 }
 .button, button,
@@ -100,11 +100,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	background: 0 0;
-	border:1px solid $secondary;
+	border:1px solid $primary;
 	width:100%;
 	text-align: left;
     margin: 10px 0 10px 0px;
-	color:$secondary;
+	color:$primary;
 	border-radius: 0px;
 	padding: 10px 17px;
 
@@ -113,6 +113,10 @@ input[type="submit"] {
 		line-height:unset;
 	}
 	
+}
+iframe {
+    width: 100%;
+    height: 85vh;
 }
 button,input,optgroup,select,textarea {
 	font-family: inherit; 

@@ -33,12 +33,12 @@
 
      a.button, button {
         background:$primary;
-	margin:1rem 0;
+	//margin:1rem 0;
 	border: 2px solid $primary;
 	border-radius:3px;
-	width:100%;
+	width:auto;
 	padding: 0.95em 2em;
-	font-size: rem(14);
+	font-size: 1rem;
 	text-transform:uppercase;
 	color:$white;
 	font-weight:700;
