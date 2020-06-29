@@ -46,25 +46,27 @@ table {margin: 0 0 1.5em;width: 100%;}
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: "Roboto", Arial, Helvetica, sans-serif;
-	
+	font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+	color:$dark;
 }
 
 h1 {font-size: 2em;margin: 0.67em 0;}
 h2{
 	text-transform:uppercase;
 	font-weight:600 !important;
+	font-size: 2em;
+	color:$secondary;
 }
 h3{
 	font-size:35px;
 	margin-bottom:25px;
-	font-weight:500;
-	color:$primary;
+	font-weight:500; 
 }
 h4{
 	font-size:20px;
 	font-weight:500;
 	margin-bottom:1rem;
+	color:$secondary;
 }
 h6{
 	
@@ -73,7 +75,7 @@ h6{
 
 }
 p {
-	margin-bottom: 1.15em;font-family: "Avenir", Arial, Helvetica, sans-serif;
+	margin-bottom: 1.15em;font-family: "Cabin", Arial, Helvetica, sans-serif;
 }
 hr {
 	background-color: #ccc;
@@ -82,7 +84,7 @@ hr {
 	margin-bottom: 1em;
 }
 body,input,select,optgroup,textarea {
-	color: #404040;
+
 	font-family:"Avenir", Calibri, Arial, Helvetica, sans-serif !important;
 	font-size: 16px;
 	font-size: 1rem;
@@ -92,21 +94,25 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background:$primary;
-	color:#fff;
+	background:$white;
+	color:$primary;
+	-webkit-transition:.5s ease;
+	transition: .5s ease;
 }
 .button, button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background: 0 0;
+	background: $primary;
 	border:1px solid $primary;
 	width:100%;
 	text-align: left;
     margin: 10px 0 10px 0px;
-	color:$primary;
+	color:$white;
 	border-radius: 0px;
 	padding: 10px 17px;
+	-webkit-transition:.5s ease;
+	transition: .5s ease;
 
 	i {
 		float:right;
