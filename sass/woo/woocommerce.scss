@@ -58,12 +58,30 @@ figure.woocommerce-product-gallery__wrapper {
 	}
 
 	.product {
+
+
+
+		.wc-donation-amount {
+			height:3.3rem;
+			display:inline-block;
+			input {
+				width: 100%;
+					text-align: left;
+					-webkit-appearance: none;
+					height: 100%;
+					padding-right: 0;
+					border: 2px solid transparent;
+					border-color: #edeef2;
+					padding-left: 1.5em;
+					border-radius: 4px;
+			}
+		}
 		.quantity {
 
 			float: left;
 			margin: 0 2em 0 0;
 			width: 10em;
-			height: 3.5em;
+			height: 3.3em;
 			position: relative;
 				input.qty {
 					width: 100%;

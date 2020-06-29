@@ -31,8 +31,8 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-
-<div class="container">
+<div class="page">
+<div class="container ">
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'row', $product ); ?>>
 
 	
@@ -81,6 +81,7 @@ if ( post_password_required() ) {
 	 */
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
+</div>
 </div>
 </div>
 </div>
