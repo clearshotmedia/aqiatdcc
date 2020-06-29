@@ -29,6 +29,10 @@ if ( ! function_exists( 'aqia_setup' ) ) :
 			'mycricket' => __( 'Sidebar Menu', 'aqia' ),
 			'main_menu_mob' => esc_html__( 'Mobile main menu', 'aqia' ),
 		) );
+		register_nav_menus( array(
+			'primary' => __( 'Primary Menu', 'tdcc' ),
+		) );
+
 		add_theme_support( 'html5', array('search-form') );
 
 		// Set up the WordPress core custom background feature.
