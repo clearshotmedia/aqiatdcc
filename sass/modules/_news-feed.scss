@@ -44,11 +44,16 @@
             color:$primary;
             h6, h3 {
                 margin-bottom:0;
+                text-transform:uppercase;
             }
         }
         .news-heading {
             display:block;
             font-weight:600;
+            line-height: 35px;
+        }
+        .link-front {
+                z-index: 9999;
         }
         .meta {
             font-size:rem(11);
