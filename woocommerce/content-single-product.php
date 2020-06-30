@@ -19,12 +19,6 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 
-/**
- * Hook: woocommerce_before_single_product.
- *
- * @hooked wc_print_notices - 10
- */
-do_action( 'woocommerce_before_single_product' );
 
 if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
@@ -34,9 +28,15 @@ if ( post_password_required() ) {
 <div class="page">
 <div class="container ">
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'row', $product ); ?>>
+<?php
+/**
+ * Hook: woocommerce_before_single_product.
+ *
+ * @hooked wc_print_notices - 10
+ */
+do_action( 'woocommerce_before_single_product' );
 
 	
-	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
 	 *
