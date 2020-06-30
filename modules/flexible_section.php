@@ -36,7 +36,7 @@ switch ($layout) {
 <div class="container">
     <div class="row">
         <div class="<?php echo $leftcol; ?> ">
-        <div class="inner" style="color:<?php echo $testcolour; ?>!important;">
+        <div class="inner" style="color:<?php echo $textcolour; ?>!important;">
         <?php 
         
         while(have_rows('left_side')) {
