@@ -9,12 +9,12 @@ $textcolour = get_sub_field('text_colour');
 ?>
 
 <?php if(get_sub_field('background_image')){ ?>
-    <section id="full_width_content_sectionn" style="background:url('<?php echo $background; ?>'); background-size:cover; background-position:center;">
+    <section id="full_width_content_section" style="background:url('<?php echo $background; ?>'); background-size:cover; background-position:center;">
 <?php } else { ?>
 <section id="full_width_content_section" style="background:<?php echo $colour; ?>">
 <?php } ?>
 
-    <div class="container ">
+    <div class="container" >
         <div class="row">
             <div class="col-12 content" style="color: <?php echo $textcolour; ?> !important;">
             <div class="inner">
