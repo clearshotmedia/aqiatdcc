@@ -61,7 +61,7 @@ defined( 'ABSPATH' ) || exit;
 					<div class="col-12 d-none d-lg-block "><div class="header-widget">
     <span class="tagline"><?php echo the_field('header_tagline', 'option');?></span><a href="<?php echo the_field('facebook_link', 'option'); ?>"><i class="icofont-facebook"></i></a> <a href="<?php echo the_field('twitter_link', 'option'); ?>"><i class="icofont-twitter"></i></a>  <a href="mailto:<?php echo the_field('email_address', 'option'); ?>"><i class="icofont-envelope"></i></a>
 </div></div>
-					<div class="col-12 pt-4 pt-lg-2">
+					<div class="col-12 pt-4 pt-lg-2 align-bottom">
 					<div class="header-right-wrapper">
 					<a href="#0" id="nav-toggle"><?php _e( 'Menu', 'tdcc' ); ?><span></span></a>
 					<div class="mobile-cart d-inline d-md-none"><a class="cart-header" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><i class="fa fa-shopping-cart"></i> </a></div>
