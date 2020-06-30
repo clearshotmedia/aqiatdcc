@@ -27,6 +27,9 @@ if ( post_password_required() ) {
 ?>
 <div class="page">
 <div class="container ">
+<?php 
+do_action( 'woocommerce_before_single_product' );
+?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'row', $product ); ?>>
 <?php
 /**
@@ -34,7 +37,7 @@ if ( post_password_required() ) {
  *
  * @hooked wc_print_notices - 10
  */
-do_action( 'woocommerce_before_single_product' );
+
 
 	
 	/**
