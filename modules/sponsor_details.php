@@ -32,7 +32,7 @@ if( have_rows('sponsor') ):
             <h3 class="card-title"><?php the_sub_field('sponsor_title'); ?></h3>
             <p class="card-text"><?php the_sub_field('paragraph'); ?></p>
                 <?php $link = get_sub_field('link');?>
-            <a href="<?php echo $link['url']; ?>"><button><?php echo $link['title']; ?></button></a>
+            <a href="<?php echo $link['url']; ?>"><button><?php echo $link['title']; ?><i class="icofont-thin-right"></i></button></a>
             </div>
             </div>
         </div>

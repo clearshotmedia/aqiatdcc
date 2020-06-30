@@ -64,9 +64,21 @@
 #sponsor-details {
   .card {
     border-radius:0;
+    margin:1rem 0;
     box-shadow: 3px 2px 20px $light-grey;
+
+    .card-img-top {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+  }
+
     .card-text:last-child {
       margin-bottom: 1rem; 
+    }
+    .card-body {
+      button {
+        width:auto;
+      }
     }
   }
   
