@@ -298,7 +298,14 @@ ul.children {display: none;}
   }
 }
 
-
+.mobile-cart {
+  float:right;
+  .cart-header {
+    i {
+      font-size:1.25rem;
+    }
+  }
+}
   .tdcc-menu {
     a.cart-header {
       i {
@@ -306,7 +313,7 @@ ul.children {display: none;}
       }
       padding-top:0.20rem;
       margin-left:1rem;
-      display:inline-block !important;
+      display:inline-block ;
       
   }
   }
@@ -471,6 +478,9 @@ ul.children {display: none;}
   
   .tdcc-menu.tdcc-menu-mobile a {
     color: $white;
+    &.cart-header {
+      display:none;
+    }
   }
   .tdcc-menu.tdcc-menu-mobile a:hover {
     color: $white;

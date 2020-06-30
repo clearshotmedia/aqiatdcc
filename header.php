@@ -64,6 +64,7 @@ defined( 'ABSPATH' ) || exit;
 					<div class="col-12 pt-4 pt-lg-2">
 					<div class="header-right-wrapper">
 					<a href="#0" id="nav-toggle"><?php _e( 'Menu', 'tdcc' ); ?><span></span></a>
+					<div class="mobile-cart d-inline d-md-none"><a class="cart-header" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><i class="fa fa-shopping-cart"></i> </a></div>
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<ul class="tdcc-menu">
 							<?php wp_nav_menu(
