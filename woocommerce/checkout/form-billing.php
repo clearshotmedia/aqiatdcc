@@ -69,6 +69,6 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php endif; ?>
 
-		<?php do_action( 'woocommerce_after_checkout_registration_form', $checkout ); ?>
+		<?php //do_action( 'woocommerce_after_checkout_registration_form', $checkout ); ?>
 	</div>
 <?php endif; ?>
