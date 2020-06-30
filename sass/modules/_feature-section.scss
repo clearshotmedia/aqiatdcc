@@ -1,7 +1,4 @@
 
-#feature-section .feature-block h4 {
-	color:$primary;
-}
 .feature-block .video p {margin-bottom:0;}
 @media only screen and (max-width: 992px){
 	.feature-block {
@@ -10,15 +7,11 @@
 	}	
 }
 #feature-section .feature-block button {
-	
 	width:100%;
 	text-align: left;
     margin: 0px 0 10px 0px;
 }
 #feature-section .feature-block button:hover {
-//	background:$primary;
-
-//	color:$white;
 	-webkit-transition:.5s ease;
 	transition: .5s ease;
 }

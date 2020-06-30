@@ -60,3 +60,14 @@
         top: 20%;
       } 
 }
+
+#sponsor-details {
+  .card {
+    border-radius:0;
+    box-shadow: 3px 2px 20px $light-grey;
+    .card-text:last-child {
+      margin-bottom: 1rem; 
+    }
+  }
+  
+}
