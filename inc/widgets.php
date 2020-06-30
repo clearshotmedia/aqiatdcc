@@ -25,15 +25,7 @@
 			'before_title'	 => '<div class="widget-title"><h3>',
 			'after_title'	 => '</h3></div>',
 	));
-	register_sidebar(
-		array(
-			'name'			 => esc_html__( 'Bottom Sidebar', 'aqia' ),
-			'id'			 => 'sidebar-1',
-			'before_widget'	 => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'	 => '</div>',
-			'before_title'	 => '<div class="sidebar-title"><h3>',
-			'after_title'	 => '</h3></div>',
-	));
+	
 	register_sidebar(
 		array(
 			'name'			 => esc_html__( 'Left Sidebar', 'aqia' ),

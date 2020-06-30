@@ -17,15 +17,13 @@ figure.woocommerce-product-gallery__wrapper {
 .woocommerce {
 
 	button, a.button {
-		background:none;
-		border: 2px solid $white;
-		border-radius:3px;
+	
+		border-radius:0px;
 		text-align:center;
-		padding: 0.95em 2em;
-		font-size: rem(14);
-		text-transform:uppercase;
+		
+		
+
 		color:$white;
-		font-weight:700;
 		transition: all 0.3s ease 0s;
 		&:hover {
 			background:$primary;
@@ -36,10 +34,10 @@ figure.woocommerce-product-gallery__wrapper {
 	}
 	
 	button.alt-button, a.alt-button {
-		background:none;
-		font-size: rem(14);
-		border: 2px solid $secondary;
-		color:$secondary;
+	
+		
+		border: 1px solid $secondary;
+		
 		&:hover {
 			background:$secondary;
 			border: 2px solid $secondary;
@@ -58,9 +56,6 @@ figure.woocommerce-product-gallery__wrapper {
 	}
 
 	.product {
-
-
-
 		.wc-donation-amount {
 			height:3.3rem;
 			display:inline-block;

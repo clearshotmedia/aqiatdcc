@@ -3,7 +3,7 @@
     padding:2rem 0;
     .widget {
 
-        margin:2rem 2rem;
+        
         background:$light;
         h5.h-widget {
                 background:$secondary;
@@ -33,15 +33,12 @@
 
      a.button, button {
         background:$primary;
-	//margin:1rem 0;
-	border: 2px solid $primary;
-	border-radius:3px;
-	width:auto;
-	padding: 0.95em 2em;
-	font-size: 1rem;
-	text-transform:uppercase;
+	font-weight:unset;
+	border: 1px solid $primary;
+	border-radius:0px;
+	padding: 10px 17px;
 	color:$white;
-	font-weight:700;
+	
 	transition: all 0.3s ease 0s;
 	&:hover {
 		background:$white;

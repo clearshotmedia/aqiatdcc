@@ -45,7 +45,7 @@ function tdcc_my_custom_widgets_init() {
 
 	register_sidebar( array(
 	  'name'          => __( 'My Shop Sidebar', '__tdcc__' ),
-	  'id'            => 'sidebar-my-custom-shop',
+	  'id'            => 'woocommerce-sidebar',
 	  'description'   => __( 'Appears on the index shop page.', '__tdcc__' ),
 	  'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	  'after_widget'  => '</div>',
@@ -137,7 +137,7 @@ if ( ! function_exists( 'tdcc_woocommerce_wrapper_start' ) ) {
 		echo '<div class="row">';
 	//	get_template_part( 'global-templates/left-sidebar-check' );
 		echo '<div class="col-md-4 gghh">';
-		do_action( 'woocommerce_sidebar' );
+		dynamic_sidebar( 'woocommerce-sidebar' );
 		echo '</div>';
 		echo '<div class="col-md-8">';
 		echo '<main class="site-main" id="main">';
