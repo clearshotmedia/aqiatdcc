@@ -121,7 +121,8 @@
   .main-navigation ul ul {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     float: left;
-    background:$white;
+    background:$secondary;
+    color:$white;
     position: absolute;
     top: 100%;
     left: -999em;
@@ -223,8 +224,6 @@
 	border-radius: 0;
 }
 .main-title{
-	font-family: 'Gotham', Arial, Helvetica, sans-serif;
-	font-size: 40px;
 	color:$white;
 	text-align:center;
 	display: table-cell;
@@ -306,7 +305,7 @@ ul.children {display: none;}
           padding: 0 8px;
       }
       padding-top:0.20rem;
-      margin:0 1rem;
+      margin-left:1rem;
       display:inline-block !important;
       
   }
@@ -345,6 +344,7 @@ ul.children {display: none;}
     li {
       line-height: 26px;
       padding: 3px 0 3px 6px;
+      color:$white;
 
       a {
         padding: .25rem ;

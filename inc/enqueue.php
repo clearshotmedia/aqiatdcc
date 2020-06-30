@@ -8,7 +8,7 @@ function aqia_scripts() {
 	wp_register_script( 'jQuery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js', null, null, true );
 	wp_enqueue_script('jQuery');
 	
-	wp_enqueue_script( 'bootstrap-cdn-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js' );
+	//wp_enqueue_script( 'bootstrap-cdn-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js' );
 	
 
 	wp_enqueue_script( 'aqia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

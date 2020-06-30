@@ -4,11 +4,11 @@ jQuery( document ).ready( function( $ ) {
 	
 
 	// Toggle navigation
-	$( '.nav-toggle' ).on( 'click', function(){	
-		$( this ).add( '.site-nav' ).toggleClass( 'active' );
-		$( this ).add( '.shrink' ).toggleClass( 'active' );
-		$( 'body' ).toggleClass( 'lock-screen' );
-	} );
+//	$( '.nav-toggle' ).on( 'click', function(){	
+	//	$( this ).add( '.site-nav' ).toggleClass( 'active' );
+	//	$( this ).add( '.shrink' ).toggleClass( 'active' );
+	//	$( 'body' ).toggleClass( 'lock-screen' );
+//	} );
 	
 	//window.onscroll = function() {scrollFunction()};
 

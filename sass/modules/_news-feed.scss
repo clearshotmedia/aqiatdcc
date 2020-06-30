@@ -21,13 +21,15 @@
     div#newsout{
         position: absolute;
         height: 100%;
-
+        width:100%;
         padding: 3rem;
         text-align: center;
         .news-inner {
             color:$white;
             h4 {
                 padding-bottom:$spacer;
+                color:$white;
+                
             }
             button {
                 margin-top:$spacer;
@@ -39,6 +41,10 @@
         width:100%;
        padding: 0.5em 1em 0.8em 1em;
        border: 1px solid $grey;
+       &:hover {
+        box-shadow: 1px 1px 9px 2px #e4e4e4;
+
+       }
         .date {
             text-align:center;
             color:$primary;

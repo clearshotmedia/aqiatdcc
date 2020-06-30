@@ -10,11 +10,6 @@
 get_header();
 ?>
 
-	
-	
-
-
-
 	<div class="lead"></div>
 	<div id="primary" class="post content-area container">
 		<main id="main" class="site-main">
@@ -25,11 +20,7 @@ get_header();
 			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
-
-			
-
-			
-			
+	
 
 		endwhile; // End of the loop.
 		?>

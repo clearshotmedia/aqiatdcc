@@ -7,16 +7,13 @@
 get_header();
 ?>
 
-	
-		
 		<?php 
 		$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
 		?>
 
-	
 	<div class="jumbotron entry-image" style="background:url('<?php echo $url; ?>'); background-position:center;background-size: cover;">
 	<?php the_title( '<h1 class="main-title">', '</h1>' ); ?>
-	
+
 		
 	</div>
 	<div class="lead">
