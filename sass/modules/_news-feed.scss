@@ -1,7 +1,7 @@
 #news-feed {
     padding-top:2rem;
     .inner {
-        background: #fff;
+        background: $white;
         padding: 18px 15px;
         display: table;
         width:100%;
@@ -27,10 +27,10 @@
         .news-inner {
             color:$white;
             h4 {
-                padding-bottom:1rem;
+                padding-bottom:$spacer;
             }
             button {
-                margin-top:1rem;
+                margin-top:$spacer;
             }
         }
     }
@@ -38,7 +38,7 @@
     .post-inner {
         width:100%;
        padding: 0.5em 1em 0.8em 1em;
-       border: 1px solid #e0e0e0;
+       border: 1px solid $grey;
         .date {
             text-align:center;
             color:$primary;
@@ -62,14 +62,14 @@
     }
 
     a.clicked .post-inner {
-        border: 2px solid #e0e0e0;
+        border: 2px solid $grey;
     }
     .middle {
         margin: 5px 0;
     }
 }
 .feature-block .inner {
-	background: #fff;
+	background: $white;
 	padding: 18px 15px;
 	display: table;
 	width:100%;

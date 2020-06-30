@@ -33,8 +33,8 @@ a {
 
 .complement{
 	background: transparent;
-	border:2px solid #fff;
-	color:#fff;
+	border:2px solid $white;
+	color:$white;
 }
 
 li > ul,li > ol {margin-bottom: 0;margin-left: 1.5em;}
@@ -46,12 +46,12 @@ table {margin: 0 0 1.5em;width: 100%;}
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+	font-family: $headings-font-family;
 	color:$dark;
 }
 
 h1 {font-size: 2em;margin: 0.67em 0;}
-h2{
+h2 {
 	text-transform:uppercase;
 	font-weight:600 !important;
 	font-size: 2em;
@@ -62,23 +62,21 @@ h3{
 	margin-bottom:25px;
 	font-weight:500; 
 }
-h4{
+h4 {
 	font-size:20px;
 	font-weight:500;
-	margin-bottom:1rem;
+	margin-bottom:$spacer;
 	color:$secondary;
 }
-h6{
-	
+h6 {
 	font-weight:600 !important;
-	
-
 }
 p {
-	margin-bottom: 1.15em;font-family: "Cabin", Arial, Helvetica, sans-serif;
+	margin-bottom: 1.15em;
+	font-family: $base-font-family;
 }
 hr {
-	background-color: #ccc;
+	background-color: $grey;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1em;

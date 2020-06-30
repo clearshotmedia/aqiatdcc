@@ -8,13 +8,13 @@
     }
     h6.subheading {
         color: $grey;
-        font-weight:600;
+       
     }
 
     i {
         font-size:rem(50) !important;
         color:$grey;
-        padding: 1rem 1rem;
+        padding: $spacer $spacer;
         &:hover {
             color:$secondary;
             -webkit-transition: all 0.3s ease-in-out 0s;

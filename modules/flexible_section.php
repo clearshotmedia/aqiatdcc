@@ -1,6 +1,7 @@
 <?php 
 $layout = get_sub_field('layout');
 $left = get_sub_field('left_side');
+$colour = get_sub_field('background_colour');
 // efault columns
 
 
@@ -30,7 +31,7 @@ switch ($layout) {
         $rightcol = 'col-md-8';
 }
 ?>
-<section id="flex">
+<section id="flex" style="background:<?php echo $colour;?>">
 <div class="container">
     <div class="row">
         <div class="<?php echo $leftcol; ?> ">

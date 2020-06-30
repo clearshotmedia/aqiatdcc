@@ -45,7 +45,7 @@ defined( 'ABSPATH' ) || exit;
 		<header id="masthead" class="<?php echo esc_attr( join( ' ', $classes ) ); ?>" role="banner">
 			<div class="container">
 
-			<div class="row">
+			<div class="row py-2">
 
 				<div class="col-2">
 				<div class="site-branding">
@@ -61,7 +61,7 @@ defined( 'ABSPATH' ) || exit;
 					<div class="col-12 d-none d-lg-block "><div class="header-widget">
     <span class="tagline"><?php echo the_field('header_tagline', 'option');?></span><a href="<?php echo the_field('facebook_link', 'option'); ?>"><i class="icofont-facebook"></i></a> <a href="<?php echo the_field('twitter_link', 'option'); ?>"><i class="icofont-twitter"></i></a>  <a href="mailto:<?php echo the_field('email_address', 'option'); ?>"><i class="icofont-envelope"></i></a>
 </div></div>
-					<div class="col-12">
+					<div class="col-12 pt-2">
 					<div class="header-right-wrapper">
 					<a href="#0" id="nav-toggle"><?php _e( 'Menu', 'tdcc' ); ?><span></span></a>
 					<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -93,7 +93,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="container">
 	<div class="row"> <div class="col align-self-end"><a href="<?php 
 	echo $link['url'];
-	?>" target="_blank" class="elearn"><?php 
+	?>"  class="elearn"><?php 
 	echo $link['title'];
 	?> <i class="icofont-swoosh-right"></i></a></div></div>
 		</div>
