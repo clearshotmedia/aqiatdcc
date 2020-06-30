@@ -15,7 +15,10 @@ pre {
 	font-family: monospace, monospace; 
 	font-size: 1em; 
 }
-
+img {
+	max-width:100%;
+	height:auto;
+}
 abbr[title] {
 	border-bottom: none;
 	text-decoration: underline; 
