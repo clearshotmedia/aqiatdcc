@@ -48,7 +48,7 @@ switch ($layout) {
         </div>
         </div>
         <div class="<?php echo $rightcol; ?> ">
-        <div class="inner">
+        <div class="inner" style="color:<?php echo $textcolour; ?>!important;">
         <?php 
         
         while(have_rows('right_side')) {
