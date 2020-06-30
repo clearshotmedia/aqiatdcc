@@ -258,6 +258,7 @@
 	  var setNavTop = function() {
 		  var offset = header.getBoundingClientRect();
 		  var top = offset.x + offset.height - 1;
+		  
 		  main_navigation.css({
 			  top: top
 		  });
@@ -294,6 +295,7 @@
 		  event.preventDefault();
 		  jQuery("#nav-toggle").toggleClass("nav-is-visible");
 		  jQuery(".header-widget").toggleClass("header-widget-mobile");
+		  jQuery("#page").toggleClass("blur");
 		  main_navigation.stop();
 		  // Open menu mobile.
 		  if (!main_navigation.hasClass("tdcc-menu-mobile")) {

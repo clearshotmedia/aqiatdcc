@@ -120,7 +120,7 @@
 
   .main-navigation ul ul {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    float: left;
+   // float: left;
     background:$secondary;
     color:$white;
     position: absolute;
@@ -130,8 +130,8 @@
   }
   .main-navigation ul ul ul {left: -999em;top: 0;}
   .main-navigation ul ul li:hover > ul,
-  .main-navigation ul ul li.focus > ul {left: 100%;}
-  .main-navigation ul ul a {width: 200px;}
+  //.main-navigation ul ul li.focus > ul {left: 100%;}
+ // .main-navigation ul ul a {width: 200px;}
   .main-navigation ul li:hover > ul,
   .main-navigation ul li.focus > ul {left: auto;}
   .main-navigation li {position: relative;padding: 3px 0px 3px 29px;;}
@@ -418,7 +418,7 @@ ul.children {display: none;}
     position: absolute;
     top: 75px;
     right: 0;
-    
+    background:$secondary;
     z-index: 800;
     overflow: auto !important;
     border-top: 1px solid #e9e9e9;
@@ -461,25 +461,23 @@ ul.children {display: none;}
   }
   .tdcc-menu.tdcc-menu-mobile li {
     line-height: 20px;
-    background: #ffffff;
+   // background: #ffffff;
     border-top: 1px solid #e9e9e9;
     width: 100% !important;
   }
   .tdcc-menu.tdcc-menu-mobile > li:first-child {
     border-top: 0px none;
   }
-  .tdcc-menu.tdcc-menu-mobile li.tdcc-current-item > a {
-    color: #03c4eb;
-  }
+  
   .tdcc-menu.tdcc-menu-mobile a {
-    color: #777777;
+    color: $white;
   }
   .tdcc-menu.tdcc-menu-mobile a:hover {
     color: $white;
   }
   .tdcc-menu.tdcc-menu-mobile .nav-toggle-subarrow {
     display: block;
-    color: #999999;
+    color: $white;
     border-left: 1px solid $light-grey;
     font-weight: normal;
     position: absolute;
@@ -553,7 +551,9 @@ ul.children {display: none;}
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-
+#nav-toggle.nav-is-visible span {
+  background: $white;
+}
 #nav-toggle.nav-is-visible span:before {
   -webkit-transform: translateX(4px) translateY(-1px) rotate(45deg);
   -ms-transform: translateX(4px) translateY(-1px) rotate(45deg);
