@@ -45,7 +45,7 @@ defined( 'ABSPATH' ) || exit;
 		<header id="masthead" class="<?php echo esc_attr( join( ' ', $classes ) ); ?>" role="banner">
 			<div class="container">
 
-			<div class="row py-lg-2">
+			<div class="row pt-lg-2">
 
 				<div class="col-2">
 				<div class="site-branding">
@@ -57,7 +57,7 @@ defined( 'ABSPATH' ) || exit;
 				
 
 				<div class="col-10">
-					<div class="row">
+					<div class="row" style="height:100%;">
 					<div class="col-12 d-none d-lg-block "><div class="header-widget">
     <span class="tagline"><?php echo the_field('header_tagline', 'option');?></span><a href="<?php echo the_field('facebook_link', 'option'); ?>"><i class="icofont-facebook"></i></a> <a href="<?php echo the_field('twitter_link', 'option'); ?>"><i class="icofont-twitter"></i></a>  <a href="mailto:<?php echo the_field('email_address', 'option'); ?>"><i class="icofont-envelope"></i></a>
 </div></div>
@@ -92,7 +92,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php $link = get_field('sub_header_link', 'option'); ?>
 	<header class="entry-header ">
 	<div class="container">
-	<div class="row"> <div class="col align-self-end"><a href="<?php 
+	<div class="row"><span class="tagline inn"><?php echo the_field('header_tagline', 'option');?></span> <div class="col align-self-end align-middle seven"><a href="<?php 
 	echo $link['url'];
 	?>"  class="elearn"><?php 
 	echo $link['title'];

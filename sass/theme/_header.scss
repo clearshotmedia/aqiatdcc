@@ -75,6 +75,9 @@
     margin-top: -1px;
     transform: rotate( -45deg );
   }
+  .seven {
+    padding:7px 0;
+  }
   .tagline{
     font-family: 'GetLost';
     color:$primary;
@@ -83,6 +86,10 @@
     display:inline-block;
     font-size: 21px;
     letter-spacing: 0.05rem;
+    &.inn {
+      color:$white;
+      text-shadow:none;
+    }
   }
   .header-widget{
     float:right;
