@@ -10,7 +10,9 @@
         
             <div class="col-md-6 d-none d-md-block">
         
-            <div id="newsout">  TEST  </div>
+            <div id="newsout">  
+            
+              </div>
                 <img src="<?php echo $background;?>" alt="background news">
             </div>
             <div class="col-md-6 posts">
