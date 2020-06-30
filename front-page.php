@@ -23,14 +23,8 @@ get_header();
 		?>
 
 	</header>
-	<div class="jumbotron entry-image" style="background:url('<?php echo $url; ?>'); background-position:center;background-size: cover;">
-	
-	
-		
-	</div>
-	<div class="lead">
 
-</div>
+	
 <?php
 
 while(have_rows('module')) {

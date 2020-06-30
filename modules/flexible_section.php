@@ -2,6 +2,7 @@
 $layout = get_sub_field('layout');
 $left = get_sub_field('left_side');
 $colour = get_sub_field('background_colour');
+$textcolour = get_sub_field('text_colour');
 // efault columns
 
 
@@ -35,7 +36,7 @@ switch ($layout) {
 <div class="container">
     <div class="row">
         <div class="<?php echo $leftcol; ?> ">
-        <div class="inner">
+        <div class="inner" style="color:<?php echo $testcolour; ?>!important;">
         <?php 
         
         while(have_rows('left_side')) {
