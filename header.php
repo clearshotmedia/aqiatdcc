@@ -59,7 +59,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class="col-10">
 					<div class="row" style="height:100%;">
 					<div class="col-12 d-none d-lg-block "><div class="header-widget">
-    <span class="tagline"><?php echo the_field('header_tagline', 'option');?></span><a href="<?php echo the_field('facebook_link', 'option'); ?>"><i class="icofont-facebook"></i></a> <a href="<?php echo the_field('twitter_link', 'option'); ?>"><i class="icofont-twitter"></i></a>  <a href="mailto:<?php echo the_field('email_address', 'option'); ?>"><i class="icofont-envelope"></i></a>
+    <a href="<?php echo the_field('facebook_link', 'option'); ?>"><i class="icofont-facebook"></i></a> <a href="<?php echo the_field('twitter_link', 'option'); ?>"><i class="icofont-twitter"></i></a>  <a href="mailto:<?php echo the_field('email_address', 'option'); ?>"><i class="icofont-envelope"></i></a>
 </div></div>
 					<div class="col-12 pt-4 pt-lg-2 align-bottom">
 					<div class="header-right-wrapper">
@@ -92,7 +92,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php $link = get_field('sub_header_link', 'option'); ?>
 	<header class="entry-header ">
 	<div class="container">
-	<div class="row"><span class="tagline inn"><?php echo the_field('header_tagline', 'option');?></span> <div class="col align-self-end align-middle seven"><a href="<?php 
+	<div class="row"><span class="tagline d-none d-md-inline inn"><?php echo the_field('header_tagline', 'option');?></span> <div class="col align-self-end align-middle seven"><a href="<?php 
 	echo $link['url'];
 	?>"  class="elearn"><?php 
 	echo $link['title'];
