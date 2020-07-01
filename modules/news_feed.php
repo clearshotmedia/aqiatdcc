@@ -74,9 +74,7 @@
             
                 
             </div></div>
-            <div class="col-12 my-3 align-center">
-                <a href="/news"><button class="secondary-button">All News</button></a>
-            </div>
+           
         </div>
     </div>
 </section>
